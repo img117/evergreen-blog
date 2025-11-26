@@ -8,7 +8,7 @@ const sh = defineCollection({
     schema: z.object({
       title: z.string(),
       folge: z.string(),
-      uid: z.string(),
+      related: z.string(),
       lang: z.string(),
       pubDate: z.string(),
       updatedDate: z.string().optional(),
@@ -20,7 +20,7 @@ const note = defineCollection({
     schema: z.object({
       title: z.string(),
       folge: z.string(),
-      uid: z.string(),
+      related: z.string(),
       lang: z.string(),
       pubDate: z.string(),
       updatedDate: z.string().optional(),

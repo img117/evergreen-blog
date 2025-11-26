@@ -11,7 +11,7 @@ const note = defineCollection({
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
 		folge: z.string().optional(),
-		uid: z.string().optional(),
+		related: z.string().optional(),
 	}),
 });
 

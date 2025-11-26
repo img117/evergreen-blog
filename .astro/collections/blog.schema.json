@@ -10,7 +10,7 @@
         "folge": {
           "type": "string"
         },
-        "uid": {
+        "related": {
           "type": "string"
         },
         "pubDate": {
@@ -26,7 +26,6 @@
       "required": [
         "title",
         "folge",
-        "uid",
         "pubDate"
       ],
       "additionalProperties": false

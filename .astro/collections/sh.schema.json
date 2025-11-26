@@ -10,7 +10,7 @@
         "folge": {
           "type": "string"
         },
-        "uid": {
+        "related": {
           "type": "string"
         },
         "lang": {
@@ -29,7 +29,7 @@
       "required": [
         "title",
         "folge",
-        "uid",
+        "related",
         "lang",
         "pubDate"
       ],

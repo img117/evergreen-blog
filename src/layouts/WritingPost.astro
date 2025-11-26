@@ -3,7 +3,6 @@ import type { CollectionEntry } from 'astro:content';
 import { BaseHead, Backlinks, Footer, Giscus, FormattedDate } from '@components/index';
 import { useTranslations } from '../i18n/utils';
 import '@fontsource-variable/noto-serif-kr';
-import post_lang_mapping from "../components/posts.json"
 
 const { title, pubDate, updatedDate, lang, uid } = Astro.props.frontmatter;
 const t = useTranslations(lang);
@@ -126,11 +125,6 @@ type Props = CollectionEntry<'writing'>['data'];
 						</div>
 					</div>
 					<div class="contents">
-						<div class="lang_selector">
-							{ lang != 'ko' && post_lang_mapping[uid]['ko'] && <a href={"/writing/" + uid + "-ko/"}>가</a> }
-							{ lang != 'ja' && post_lang_mapping[uid]['ja'] && <a href={"/writing/" + uid+"-ja/"}>あ</a> }
-							{ lang != 'en' && post_lang_mapping[uid]['en'] && <a href={"/writing/" + uid+"/"}>A</a> }
-						</div>
 						<slot />
 					</div>
 				</div>
