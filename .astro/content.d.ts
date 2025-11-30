@@ -181,14 +181,6 @@ declare module 'astro:content' {
   rendered?: RenderedContent;
   filePath?: string;
 }>;
-"sh": Record<string, {
-  id: string;
-  body?: string;
-  collection: "sh";
-  data: InferEntrySchema<"sh">;
-  rendered?: RenderedContent;
-  filePath?: string;
-}>;
 "writing": Record<string, {
   id: string;
   body?: string;
