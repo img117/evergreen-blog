@@ -18,11 +18,11 @@ const relatedNotes = related.split('/')
 <div class="bounds">
     {related.length > 0 && (
        <div>
-        Related notes: 
+        Related: 
             {relatedNotes.map((ref, index) => (
                     // for ecah item, create a link and put a slash at the end. But ignore the last slash
                     <span>
-                        <a href={`/${categories[ref]}/${ref}/`}>{`${ref}`}</a>{index < relatedNotes.length - 1 ? ' / ' : ''}
+                        <a href={`/${categories[ref]}/${ref}/`}>{`${ref}`}</a>{index < relatedNotes.length - 1 ? '  /  ' : ''}
                     </span>
             ))}
         </div>
