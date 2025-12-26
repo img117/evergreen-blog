@@ -8,7 +8,7 @@
   "6": "There are two types of arrays: Static and Dynamic",
   "7": "Why insert/delete operations are slow in arrays",
   "8": "Index operator allows constant time access to the data",
-  "9": "The variable name is a pointer",
+  "9": "The name of the array is a pointer",
   "10": "You can perform arithmetic operations on a pointer",
   "11": "Ruby can store different types in one array because everything is an Object",
   "12": "void-pointer plays the role of Object",
