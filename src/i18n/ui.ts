@@ -7,20 +7,16 @@ export const languages = {
   
   export const ui = {
     ko: {
-      'home.name': '지원',
+      'home.name': 'Jii',
       'home.username': 'npc4991',
       'home.text': "안녕하세요 (° ▽ °)",
       'home.quote': '기록하기를 좋아하는 인간에게 축복을.',
       'home.menu1': {
-        'title':'끄적',
+        'title':'note',
         'exp': '생각을 정리하고 기록하는 공간'
       },
-      'home.menu2': {
-        'title':'담소',
-        'exp': '나의 이야기를 나누는 공간'
-      },
       'home.menu3': {
-        'title':'현재',
+        'title':'now',
         'exp': '지금의 나를 담는 공간'
       },
     },
@@ -33,10 +29,6 @@ export const languages = {
         'title':'note',
         'exp': 'a space to declutter my brain'
       },
-      'home.menu2': {
-        'title':'diary',
-        'exp': 'a space for little stories'
-      },
       'home.menu3': {
         'title':'now',
         'exp': 'a space for my now'
@@ -48,15 +40,11 @@ export const languages = {
       'home.text': "こんにちは (° ▽ °)",
       'home.quote': '書き留めることを愛する人へ、祝福を。',
       'home.menu1': {
-        'title':'書く',
+        'title':'note',
         'exp': '何でも記録する空間'
       },
-      'home.menu2': {
-        'title':'話す',
-        'exp': '自分についてそっと話す空'
-      },
       'home.menu3': {
-        'title':'現在',
+        'title':'now',
         'exp': '私の今を映す空間'
       },
     },

@@ -1,7 +1,7 @@
 require 'json'
 
 # Define the directories and categories
-categories = ["writing", "note"]
+categories = ["note"]
 
 # Initialize a hash to store the category for each post
 category_hash = {}

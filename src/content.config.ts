@@ -15,15 +15,5 @@ const note = defineCollection({
       updatedDate: z.string().optional(),
     })
 });
-const writing = defineCollection({
-    loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/writing" }),
-    schema: z.object({
-      title: z.string(),
-      lang: z.string(),
-      uid: z.string(),
-      pubDate: z.string(),
-      updatedDate: z.string().optional(),
-    })
-});
 // Export a single `collections` object to register your collection(s)
-export const collections = {note, writing};
+export const collections = {note};
