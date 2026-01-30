@@ -16,7 +16,7 @@ type Props = CollectionEntry<'note'>['data'];
 		<BaseHead title={title} />
 		<style lang="scss">
 			.title {
-				padding: 3rem 0 2rem;
+				padding-bottom: 3rem;
 				line-height: 1;
 
 				& .date,
@@ -34,20 +34,16 @@ type Props = CollectionEntry<'note'>['data'];
 			}
 
 			.title h1 {
-				margin-top: 0;
-			}
-
-			.title h1 {
-				margin-bottom: 0.9rem;
-			}
-
-			.prose {
-				color: var(--black);
+				font-size: 2rem;
+				line-height: 1.25;
+				padding-right: 3rem;
+				margin-bottom: 1rem;
 			}
 
 			.navi {
 				display: flex;
 				align-items: center;
+				justify-content: space-between;
 				
 				a {
 					color: inherit;
@@ -81,11 +77,9 @@ type Props = CollectionEntry<'note'>['data'];
 								<span class="by">by</span>
 								<a href="/">{t('home.name')}</a>
 							</div>
-							<span class="separator"> … </span>
 							<div class="navi_item">
-								<a href="/note">{t('home.menu1')['title']}</a>
+								<a href="/note">{t('home.back')}</a>
 							</div>
-							<span class="separator"></span>
 						</div>
 					</div>
 					<div class="contents">

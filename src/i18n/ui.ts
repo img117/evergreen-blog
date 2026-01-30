@@ -7,10 +7,11 @@ export const languages = {
   
   export const ui = {
     ko: {
-      'home.name': 'Jii',
+      'home.name': '지이',
       'home.username': 'npc4991',
       'home.text': "안녕하세요 (° ▽ °)",
       'home.quote': '기록하기를 좋아하는 인간에게 축복을.',
+      'home.back': '← 돌아가기',
       'home.menu1': {
         'title':'note',
         'exp': '생각을 정리하고 기록하는 공간'
@@ -25,6 +26,7 @@ export const languages = {
       'home.username': 'npc4991',
       'home.text': "Hello, there (° ▽ °)",
       'home.quote': 'Blessings to those who love to record.',
+      'home.back': '← back',
       'home.menu1': {
         'title':'note',
         'exp': 'a space to declutter my brain'
@@ -39,6 +41,7 @@ export const languages = {
       'home.username': 'npc4991',
       'home.text': "こんにちは (° ▽ °)",
       'home.quote': '書き留めることを愛する人へ、祝福を。',
+      'home.back': '← 戻る',
       'home.menu1': {
         'title':'note',
         'exp': '何でも記録する空間'
