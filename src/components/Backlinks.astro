@@ -20,7 +20,7 @@ const refs = Object.keys(backlinks).filter(key => backlinks[key].includes(curren
         <ul>
             {refs.map(ref => (
                 <li>
-                    <a href={`/note/${ref}/`}>{`${ref.split('-')[0]} - ${mappings[ref] ?? 0}`}</a>
+                    <a href={`/note/${ref}/`}>{`${ref.split('-')[0].replaceAll('_','.')} - ${mappings[ref] ?? 0}`}</a>
                 </li>
             ))}
         </ul>
