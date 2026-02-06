@@ -8,7 +8,7 @@ export const languages = {
   export const ui = {
     ko: {
       'home.name': '지이',
-      'home.username': 'npc4991',
+      'home.username': 'rolemadelen',
       'home.text': "안녕하세요 (° ▽ °)",
       'home.quote': '기록하기를 좋아하는 인간에게 축복을.',
       'home.back': '← 돌아가기',
@@ -23,7 +23,7 @@ export const languages = {
     },
     en: {
       'home.name': 'Jii',
-      'home.username': 'npc4991',
+      'home.username': 'rolemadelen',
       'home.text': "Hello, there (° ▽ °)",
       'home.quote': 'Blessings to those who love to record.',
       'home.back': '← back',
@@ -38,7 +38,7 @@ export const languages = {
     },
     ja: {
       'home.name': 'ジー',
-      'home.username': 'npc4991',
+      'home.username': 'rolemadelen',
       'home.text': "こんにちは (° ▽ °)",
       'home.quote': '書き留めることを愛する人へ、祝福を。',
       'home.back': '← 戻る',
