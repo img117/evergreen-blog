@@ -19,6 +19,7 @@
   "1_6_2_e": "Generate GPG key",
   "1_6_3_e": "Update existing GPG key's name and email",
   "1_6_4_e": "Sign commit messages",
+  "1_6_5_e": "Remove the lock file to resolve GPG lock issue",
   "1_7_1_e": "Batch clone git repositories",
   "1_7_2_e": "Batch sign previous commit messages",
   "1_7_3_e": "Bypass passphrase when cloning git repositories",
