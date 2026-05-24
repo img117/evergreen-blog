@@ -3,9 +3,8 @@ import type { CollectionEntry } from 'astro:content';
 import { BaseHead, Backlinks, Footer, FormattedDate } from '@components/index';
 import { useTranslations } from '../i18n/utils';
 import '@fontsource-variable/noto-serif-kr';
-import RelatedLinks from '@components/RelatedLinks.astro';
 
-const { title, pubDate, updatedDate, lang, related } = Astro.props.frontmatter;
+const { title, pubDate, updatedDate, lang } = Astro.props.frontmatter;
 const t = useTranslations(lang);
 type Props = CollectionEntry<'note'>['data'];
 
@@ -31,8 +30,8 @@ type Props = CollectionEntry<'note'>['data'];
 				display: flex;
 				font-size: var(--sm);
 				font-style: italic;
-				justify-content: flex-end;
-				margin-top: 3rem;
+				// justify-content: flex-end;
+				margin: 1rem 0 1.5rem;
 			}
 
 			.title h1 {
@@ -74,6 +73,20 @@ type Props = CollectionEntry<'note'>['data'];
 				<div class="prose">
 					<div class="title">
 						<h1>{title}</h1>
+						<div class="date">
+							{
+								!updatedDate && (
+									<FormattedDate date={pubDate} />
+								)
+							}
+							{
+								updatedDate && (
+									<span class="last-updated-on">
+										Last updated <FormattedDate date={updatedDate} />
+									</span>
+								)
+							}
+						</div>
 						<div class="navi">
 							<div class="author">
 								<span class="by">by</span>
@@ -87,23 +100,8 @@ type Props = CollectionEntry<'note'>['data'];
 					<div class="contents">
 						<slot />
 					</div>
-					<div class="date">
-							{
-								!updatedDate && (
-									<FormattedDate date={pubDate} />
-								)
-							}
-							{
-								updatedDate && (
-									<span class="last-updated-on">
-										Last updated on <FormattedDate date={updatedDate} />
-									</span>
-								)
-							}
-						</div>
 				</div>
 			</article>
-			<RelatedLinks related={related}/>
 			<Backlinks />
 		</main>
 		<Footer lang={lang} />

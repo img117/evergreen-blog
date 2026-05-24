@@ -205,3 +205,10 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+del {
+	font-size: 0.8rem;
+	color: #aaa;
+	text-decoration-thickness: 1.5px;
+	text-decoration-color: rgba(135, 25, 25, 0.619);
+}

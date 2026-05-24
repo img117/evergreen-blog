@@ -8,22 +8,9 @@ const lang = "en"
 const t = useTranslations(lang);
 
 const posts = (await getCollection('note')).sort((a, b) => {
-	const folge_sort = (id_1: string, id_2: string) => {
-        const len = Math.min(id_1.length, id_2.length);
-
-        // Compare each character's ASCII value
-        for (let i = 0; i < len; i++) {
-            const diff = id_1.charCodeAt(i) - id_2.charCodeAt(i);
-            if (diff !== 0) return diff; // Return the first difference
-        }
-
-        // If one is a prefix of the other, shorter one should come first
-        return id_1.length - id_2.length;
-    };
-
-	const folgeA = a.data.folge ?? "note"
-	const folgeB = b.data.folge ?? "note"
-    return folge_sort(folgeA , folgeB);
+	const dateA = a.data.pubDate;
+	const dateB = b.data.pubDate;
+    return new Date(dateB) - new Date(dateA);
 })
 
 ---
@@ -125,7 +112,7 @@ const posts = (await getCollection('note')).sort((a, b) => {
 						</div>
 						<span class="separator"> … </span>
 						<div class="navi_item">
-							<a href="/note/a_c_x/">now?</a>
+							<a href="/note/now/">now?</a>
 					</div>
 				</div>
 				<div class="posts">
@@ -138,7 +125,7 @@ const posts = (await getCollection('note')).sort((a, b) => {
 									<li>
 										<a href={`/note/${post.id}/`}>
 											<div class="head">
-												<span class="subtext">{`(${post.data.folge})`}</span>
+												<span class="subtext">{`${new Date(post.data.pubDate).toLocaleDateString('en-US', {weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric'})}`}</span>
 												<span class="head__title">{`${post.data.title}`}</span>
 											</div>
 										</a>

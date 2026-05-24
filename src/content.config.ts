@@ -8,8 +8,6 @@ const note = defineCollection({
     loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/note" }),
     schema: z.object({
       title: z.string(),
-      folge: z.string(),
-      related: z.string(),
       lang: z.string(),
       pubDate: z.string(),
       updatedDate: z.string().optional(),
