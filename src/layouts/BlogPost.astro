@@ -5,12 +5,12 @@ import { useTranslations } from '../i18n/utils';
 import '@fontsource-variable/noto-serif-kr';
 
 const { title, pubDate, updatedDate, lang } = Astro.props.frontmatter;
-const t = useTranslations(lang);
+const t = useTranslations("en");
 type Props = CollectionEntry<'note'>['data'];
 
 ---
 
-<html lang={lang ?? "en"}>
+<html lang="en">
 	<head>
 		<BaseHead title={title} />
 		<style lang="scss">
@@ -29,9 +29,8 @@ type Props = CollectionEntry<'note'>['data'];
 			.date {
 				display: flex;
 				font-size: var(--sm);
-				font-style: italic;
-				// justify-content: flex-end;
 				margin: 1rem 0 1.5rem;
+				color: #555;
 			}
 
 			.title h1 {
@@ -82,7 +81,7 @@ type Props = CollectionEntry<'note'>['data'];
 							{
 								updatedDate && (
 									<span class="last-updated-on">
-										Last updated <FormattedDate date={updatedDate} />
+										Last updated on <FormattedDate date={updatedDate} />
 									</span>
 								)
 							}

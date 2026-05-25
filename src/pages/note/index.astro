@@ -125,7 +125,7 @@ const posts = (await getCollection('note')).sort((a, b) => {
 									<li>
 										<a href={`/note/${post.id}/`}>
 											<div class="head">
-												<span class="subtext">{`${new Date(post.data.pubDate).toLocaleDateString('en-US', {weekday: 'short', year: 'numeric', month: 'numeric', day: 'numeric'})}`}</span>
+												<span class="subtext">{`${new Date(post.data.pubDate).toLocaleDateString('en-US', {year: 'numeric', month: 'numeric', day: 'numeric'})}`}</span>
 												<span class="head__title">{`${post.data.title}`}</span>
 											</div>
 										</a>
