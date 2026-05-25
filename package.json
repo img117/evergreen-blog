@@ -10,15 +10,15 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^4.2.6",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.3.1",
-    "@fontsource-variable/noto-serif-kr": "^5.2.5",
+    "@astrojs/mdx": "^4.3.14",
+    "@astrojs/rss": "^4.0.18",
+    "@astrojs/sitemap": "^3.7.2",
+    "@fontsource-variable/noto-serif-kr": "^5.2.10",
     "rehype-external-links": "^3.0.0",
     "remove": "^0.1.5"
   },
   "devDependencies": {
-    "astro": "^5.7.12",
-    "sass": "^1.87.0"
+    "astro": "^6.3.7",
+    "sass": "^1.100.0"
   }
 }
