@@ -3,7 +3,6 @@
   "compilerOptions": {
     "strictNullChecks": true,
     "types": ["astro/client"],
-    "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
