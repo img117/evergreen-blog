@@ -2,9 +2,9 @@
 title: "now now now"
 lang: "en"
 pubDate: "April 01 2025 05:30"
-updatedDate: "May 24 2026 19:20"
+updatedDate: "June 23 2026 05:29"
 ---
 
 - still working as a Validation Engineer
 - started studying cybersecurity
-  + currently taking [Google Cybersecurity Professional Certificate](https://www.coursera.org/professional-certificates/google-cybersecurity) course
+  + ~~currently taking~~ completed [Google Cybersecurity Professional Certificate](https://www.coursera.org/professional-certificates/google-cybersecurity) course!
