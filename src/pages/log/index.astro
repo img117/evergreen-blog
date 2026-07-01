@@ -18,7 +18,7 @@ const posts = (await getCollection('note')).sort((a, b) => {
 <!doctype html>
 <html lang="en">
 	<head>
-		<title>note | jiiyoo.me</title>
+		<title>writing | jiiyoo.me</title>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 		<style lang="scss">
 			.header {
@@ -102,7 +102,7 @@ const posts = (await getCollection('note')).sort((a, b) => {
 			<section>
 				<div class="header">
 					<div class="title">
-						<h1>{t('home.menu1')['title']}</h1>
+						<h1>{t('home.menu2')['title']}</h1>
 					</div>
 
 					<div class="navi">
@@ -112,7 +112,12 @@ const posts = (await getCollection('note')).sort((a, b) => {
 						</div>
 						<span class="separator"> … </span>
 						<div class="navi_item">
-							<a href="/note/now/">now?</a>
+							<a href="/dev/">dev</a>
+						</div>
+						︲
+						<div class="navi_item">
+							<a href="/log/now/">now?</a>
+						</div>
 					</div>
 				</div>
 				<div class="posts">
@@ -123,7 +128,7 @@ const posts = (await getCollection('note')).sort((a, b) => {
 								return (
 								<div class="post">
 									<li>
-										<a href={`/note/${post.id}/`}>
+										<a href={`/log/${post.id}/`}>
 											<div class="head">
 												<span class="subtext">{`${new Date(post.data.pubDate).toLocaleDateString('en-US', {year: 'numeric', month: 'numeric', day: 'numeric'})}`}</span>
 												<span class="head__title">{`${post.data.title}`}</span>

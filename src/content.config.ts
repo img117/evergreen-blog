@@ -5,7 +5,16 @@ import { z, defineCollection } from "astro:content";
 // Define a `loader` and `schema` for each collection
 
 const note = defineCollection({
-    loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/note" }),
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/log" }),
+    schema: z.object({
+      title: z.string(),
+      lang: z.string(),
+      pubDate: z.string(),
+      updatedDate: z.string().optional(),
+    })
+});
+const dev = defineCollection({
+    loader: glob({ pattern: '**/[^_]*.md', base: "./src/content/dev" }),
     schema: z.object({
       title: z.string(),
       lang: z.string(),
@@ -14,4 +23,4 @@ const note = defineCollection({
     })
 });
 // Export a single `collections` object to register your collection(s)
-export const collections = {note};
+export const collections = {note, dev};

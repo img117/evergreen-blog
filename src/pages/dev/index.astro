@@ -1,0 +1,148 @@
+---
+import { getCollection } from 'astro:content';
+import { BaseHead, Footer } from '@components/index';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
+import { useTranslations } from '../../i18n/utils';
+
+const lang = "en"
+const t = useTranslations(lang);
+
+const posts = (await getCollection('dev')).sort((a, b) => {
+	const dateA = a.data.pubDate;
+	const dateB = b.data.pubDate;
+    return new Date(dateB) - new Date(dateA);
+})
+
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>dev | jiiyoo.me</title>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<style lang="scss">
+			.header {
+				& .title {
+					display: flex;
+					justify-content: space-between;
+				}
+				
+				& > span,
+				.menu {
+					font-size: var(--sm);
+				}
+			}
+			
+			.posts {
+				a {
+					text-decoration: none;
+					display: block;
+					
+					&:hover {
+						background-color: rgb(var(--gray-light));
+						border-radius: 5px;
+					}
+					
+					& span {
+						padding: 0.2rem;
+						transition: all 0.1s ease;
+					}
+				}
+				
+				& > ul {
+					padding: 0;
+				}
+				
+				li {
+					list-style: none;
+					transition: opacity 0.2s ease;
+				}
+
+				.head {
+					display: flex;
+					justify-content: space-between;
+					flex-direction: row-reverse;
+
+					@media only screen and (max-width: 599px) {
+						display: block;
+						margin: 0.5rem 0;
+					}
+				}
+			}
+
+			.navi {
+				display: flex;
+				align-items: center;
+				margin-bottom: 3rem;
+				
+				a {
+					color: inherit;
+					font-size: var(--sm);
+				}
+
+				.by {
+					font-size: var(--xs);
+				}
+			}
+
+			.separator {
+				margin: 0 0.5rem;
+			}
+
+			.subtext {
+				display: block;
+				font-size: var(--xs);
+				color: #aaa;
+				transition: all 0.2s ease;
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section>
+				<div class="header">
+					<div class="title">
+						<h1>{t('home.menu1')['title']}</h1>
+					</div>
+
+					<div class="navi">
+						<div class="author">
+							<span class="by">by</span>
+							<a href="/">{t('home.name')}</a>
+						</div>
+						<span class="separator"> … </span>
+						<div class="navi_item">
+							<a href="/log/">log</a>
+						</div>
+						︲
+						<div class="navi_item">
+							<a href="/log/now/">now?</a>
+						</div>
+					</div>
+				</div>
+				<div class="posts">
+					<ul>
+						{
+							posts
+							.map((post) => {
+								return (
+								<div class="post">
+									<li>
+										<a href={`/dev/${post.id}/`}>
+											<div class="head">
+												<span class="subtext">{`${new Date(post.data.pubDate).toLocaleDateString('en-US', {year: 'numeric', month: 'numeric', day: 'numeric'})}`}</span>
+												<span class="head__title">{`${post.data.title}`}</span>
+											</div>
+										</a>
+									</li>
+								</div>
+								);
+							})
+						}
+					</ul>
+				</div>
+			</section>
+		</main>
+		<Footer />
+	</body>
+</html>

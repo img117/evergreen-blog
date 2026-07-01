@@ -1,6 +1,9 @@
 ---
 import backlinks from "./backlinks.json"
 import mappings from "./mappings.json"
+import categories from "./categories.json"
+
+const { slur } = Astro.props;
 
 const path = Astro.url.pathname.split('/')
 const currentPath = decodeURIComponent(path[path.length-2]);
@@ -20,7 +23,7 @@ const refs = Object.keys(backlinks).filter(key => backlinks[key].includes(curren
         <ul>
             {refs.map(ref => (
                 <li>
-                    <a href={`/note/${ref}/`}>{`${ref.split('-')[0].replaceAll('_','.')} - ${mappings[ref] ?? 0}`}</a>
+                    <a href={`/${categories[ref]}/${ref}/`}>{`${ref.split('-')[0].replaceAll('_','.')} - ${mappings[ref] ?? 0}`}</a>
                 </li>
             ))}
         </ul>

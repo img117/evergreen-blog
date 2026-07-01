@@ -13,7 +13,7 @@ export const languages = {
       'home.quote': '기록하기를 좋아하는 인간에게 축복을.',
       'home.back': '← 돌아가기',
       'home.menu1': {
-        'title':'note',
+        'title':'writing',
         'exp': '생각을 정리하고 기록하는 공간'
       },
       'home.menu3': {
@@ -28,12 +28,16 @@ export const languages = {
       'home.quote': 'Blessings to those who love to record.',
       'home.back': '← back',
       'home.menu1': {
-        'title':'note',
-        'exp': 'a space to declutter my brain'
+        'title':'dev',
+        'exp': '...space for tech'
+      },
+      'home.menu2': {
+        'title':'log',
+        'exp': '...space for my daily'
       },
       'home.menu3': {
         'title':'now',
-        'exp': 'a space for my now'
+        'exp': '...space for my now'
       },
     },
     ja: {
@@ -43,7 +47,7 @@ export const languages = {
       'home.quote': '書き留めることを愛する人へ、祝福を。',
       'home.back': '← 戻る',
       'home.menu1': {
-        'title':'note',
+        'title':'writing',
         'exp': '何でも記録する空間'
       },
       'home.menu3': {
