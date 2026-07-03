@@ -20,7 +20,6 @@ export default defineConfig({
 		]
 	},
 	redirects: {
-		"/note/17": "/log/17",
-		"/note/9": "/log/9",
+		"/note/[...slug]": "/log/[...slug]"
 	}
 });
